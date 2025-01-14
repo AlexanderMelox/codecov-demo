@@ -1,3 +1,8 @@
+coverage:
+  status:
+    project: off
+    patch: off
+
 component_management:
   individual_components:
     - component_id: api-calculator # this is an identifier that should not be changed
@@ -8,4 +13,20 @@ component_management:
       name: smiles # this is a display name, and can be changed freely
       paths:
         - api/smiles/
-y
+
+flag_management:
+  individual_flags:
+    - name: backend
+      paths:
+        - api/
+      statuses:
+        - type: project
+          target: 100%
+          threshold: 1%
+    - name: frontend
+      paths:
+        - web/
+      statuses:
+        - type: project
+          target: auto
+          threshold: 1%
